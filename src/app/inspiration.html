@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f6f3f2",
+                        "outline-variant": "#dcc1b9",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "primary-fixed-dim": "#ffb59f",
+                        "on-primary-fixed": "#3a0a00",
+                        "tertiary-container": "#555451",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed": "#261900",
+                        "tertiary-fixed-dim": "#c9c6c2",
+                        "surface": "#fcf9f8",
+                        "on-secondary-container": "#785a1a",
+                        "surface-dim": "#dcd9d9",
+                        "outline": "#89726c",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#6f240a",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "secondary-fixed-variant": "#5d4201",
+                        "secondary-container": "#fed488",
+                        "inverse-surface": "#303030",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface-variant": "#55423d",
+                        "tertiary-fixed": "#e6e2de",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-container-highest": "#e4e2e1",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#cbc8c4",
+                        "on-surface": "#1b1c1c",
+                        "surface-container": "#f0eded",
+                        "tertiary": "#3e3d3a",
+                        "primary-container": "#8e3a1f",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e4e2e1",
+                        "inverse-primary": "#ffb59f",
+                        "surface-tint": "#9b4428",
+                        "on-primary-container": "#ffb8a3",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "secondary": "#775a19",
+                        "primary-fixed": "#ffdbd0",
+                        "on-primary-fixed-variant": "#7c2d13"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "80px",
+                        "container-max": "1280px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-md": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .mandala-pattern {
+            background-image: radial-gradient(#8e3a1f10 2px, transparent 2px);
+            background-size: 32px 32px;
+        }
+
+        .mask-organic-1 {
+            clip-path: ellipse(45% 50% at 50% 50%);
+        }
+
+        .mask-organic-2 {
+            border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-[#fdfcfb] dark:bg-stone-950 border-b border-[#8E3A1F]/10 shadow-[0_4px_20px_-5px_rgba(142,58,31,0.08)]">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[#8E3A1F] dark:text-[#a64d32]" data-icon="menu">menu</span>
+                <h1
+                    class="text-2xl font-serif italic text-[#8E3A1F] dark:text-[#a64d32] font-['Noto_Serif'] font-medium tracking-wide">
+                    Henna Heritage</h1>
+            </div>
+            <button
+                class="bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-md transition-opacity active:opacity-80">Book
+                Now</button>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[751px] flex flex-col justify-end overflow-hidden px-gutter pb-xl">
+            <div class="absolute inset-0 z-0">
+                <img alt="Artist in Namaste" class="w-full h-full object-cover"
+                    data-alt="A serene henna artist wearing elegant traditional wedding attire, captured in a respectful namaste gesture. The scene is bathed in soft, golden hour lighting that highlights the intricate terracotta henna patterns on her hands. The atmosphere is calm and artistic, reflecting a high-end minimalist editorial aesthetic with a warm ivory and gold color palette. The background is softly blurred to maintain focus on the artist's peaceful expression and detailed craftsmanship."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG67nkH_AxHaq0bdaYbQ1pJHavy0lp-OM5ZbJNq9QuXHTdMe0-qY4WWwik5dGzWEL4K5iDN0MEawfmfrmciwJ7n7RpQcNmxTCnYX4_8ODqfE1bKnf07EJUHiWs6UWMgSfYnbGDpsGpc3u3FlownD8WFjq0cjnssG1zKK20l5oJBnZHKkGBW-7b7MdfQuNVnoe9_CDoAqRblecP4-FVgQJsyDNvcqfu4Qkv43Q3RkmOzAGdQioJHZzt1Q_ExSLA9VWOfLbxqxvY9Vw" />
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-xl">
+                <h2 class="font-display-lg text-display-lg text-primary mb-sm">Artistry in Every Stroke.</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Timeless Henna for Your Most
+                    Cherished Moments.</p>
+                <button
+                    class="bg-primary px-8 py-4 rounded-lg text-on-primary font-label-md shadow-lg shadow-primary/20 hover:opacity-90 transition-all">Book
+                    a Session</button>
+            </div>
+        </section>
+        <!-- About Me Section -->
+        <section class="py-xl px-gutter bg-surface-container-low relative overflow-hidden">
+            <div class="mandala-pattern absolute inset-0 opacity-40"></div>
+            <div class="relative z-10 grid md:grid-cols-2 gap-lg items-center max-w-container-max mx-auto">
+                <div class="order-2 md:order-1">
+                    <span class="text-secondary font-label-md mb-xs block">Artist Story</span>
+                    <h3 class="font-headline-lg text-headline-lg text-primary mb-md">Crafting Elegance Through Heritage
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">
+                        With over 10 years of experience, I bring the ancient art of henna to the modern woman. My
+                        passion lies in blending traditional Rajasthani motifs with contemporary geometric patterns,
+                        ensuring every design is a unique reflection of your personal story.
+                    </p>
+                    <div class="flex gap-md">
+                        <div class="border-l-2 border-outline-variant pl-4">
+                            <span class="block font-headline-md text-primary">10+</span>
+                            <span class="text-label-md text-on-surface-variant">Years Exp.</span>
+                        </div>
+                        <div class="border-l-2 border-outline-variant pl-4">
+                            <span class="block font-headline-md text-primary">500+</span>
+                            <span class="text-label-md text-on-surface-variant">Brides</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="w-72 h-96 mask-organic-2 overflow-hidden shadow-2xl shadow-primary/10">
+                        <img alt="Artist Portrait" class="w-full h-full object-cover"
+                            data-alt="A warm, professional portrait of a female henna artist with a welcoming smile, set against a soft ivory background. She is captured in soft, natural window lighting that creates a bright and airy minimalist aesthetic. The image features a shallow depth of field, emphasizing her kind expression and professional demeanor. The overall color palette is composed of warm earth tones, terracotta accents, and soft golds, echoing the heritage of her craft."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ3Sm9Dg0KaNw9oqWluAO3GYFKbixPn4bSKRsYPWf6tH4MKbRheuIo5zcIfGqKF1QZgsIIDs9OAVZW-T1Anhxm0pwg8dfi47B_SklHsnxMxwloXiwHAAFmdo8U_aSFJo8GRs_8KWNWqxiec1pUtRPkz5zbKpcx5t7nojTaKbr_QFnkrNY7b5OvIMvhQmzxR_FlszFIlMGRcQr2DPAxgddkwdXyZVSitg_xMUz5r9X3jXhJzEFfVeXU7TLaMnkXq77WVyx-ezsYhJI" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Gallery -->
+        <section class="py-xl px-gutter max-w-container-max mx-auto">
+            <div class="text-center mb-xl">
+                <h3 class="font-headline-lg text-headline-lg text-primary mb-xs">Curated Masterpieces</h3>
+                <p class="font-body-md text-on-surface-variant italic">A glimpse into the intricate world of henna
+                    heritage</p>
+            </div>
+            <!-- Bento Grid Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div class="col-span-2 row-span-2 rounded-xl overflow-hidden shadow-md">
+                    <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        data-alt="An extreme close-up of highly intricate bridal henna designs covering the palms and wrists of a bride. The patterns include detailed mandala motifs and floral filigree in a deep reddish-brown terracotta paste. The lighting is warm and directional, accentuating the texture of the dried henna against the soft skin. The overall style is editorial and luxurious, emphasizing the patient artistry of a traditional wedding ceremony."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsbt-X2I44oUYVCsFf9tnUP2yPVLvbB8MwkawyoP2Bvkk6Sw9HTedPBdm5OGmD6Tvzt4HCgOb37seTVFH7OVhKdg2G1ZdK-DwTKvzVSeW1O4N1Ir2f1axEI55XfVOArChzQlVTyUvkGmp4P3xnk8nWXfG6xMSh0uJ2BfQzhIMmWsiEn1s3Hka62eqXcb9i_JPzpE1z-9vczF6bkMmvRlLuH29x0t3uF2e817Gu9opCIvwA6OmKtlGKUXLLDqU2PfEDodaGprIi0bU" />
+                </div>
+                <div class="col-span-2 row-span-1 rounded-xl overflow-hidden shadow-md">
+                    <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        data-alt="A modern interpretation of henna art featuring minimalist floral patterns on the top of a hand and fingers. The design is clean and contemporary, set against a bright white background with soft, diffused lighting. The color palette focuses on deep charcoal-toned henna and soft skin tones, creating a high-contrast and sophisticated aesthetic. This image represents the artist's ability to blend ancient tradition with modern lifestyle photography."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCIkogc2_WT0wza7F216WZwOdFk0MzW7LvlSQ1r5YynosQI_BY7ZaNVZrGfNjbtm7pbx4n7EcqaiFSamFu5oS69Hiv0Nl-1QNm86rMk1iFotSP4RuKlFs72p87axKnYYiZ6DyMSdmReCCWiFrdtASOCSIL5sGj0AxklnmJ16pwCTIfixALl0e-YQWjRIfKTmRMXfgYgvldSLgQq7IinRb8IQIRdM_RgFNZpZ33o5qb-Lf1MYp_fSEr-S_0Cu9iGVPUpmv-y6RYu-8" />
+                </div>
+                <div class="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-md">
+                    <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        data-alt="Intricate geometric henna patterns on the feet, showcasing symmetrical and precise line work typical of Moroccan styles. The setting is a warm ivory floor with soft shadows, creating a tranquil and luxurious atmosphere. The lighting is bright and clean, emphasizing the contrast between the dark henna paste and the light-colored surfaces. The mood is serene and artistic, reflecting the heritage and precision of the craft."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaSJmQmN3ZYvr-QQwwG5ivWl0T99dy3GmkcBJMykJG1-xlHWXhTQN6JV4xVh3gN1errwBAAJwx7XHYluhC90Fy0_8rtADS7qlDQfxPHIrEBWam93c0SJBm7T4Juk2aJPTTj0d2dD_xZq51uy3a9RHPDJuyTMPL7Mm5QoB4HCBRFsFskq6gmLUjtjwDOGIeU36cMBJLjxscDkWNmYJuoLztTQig5YEa5c9t0Co9lvtKv9S-3WajEy5vUjE24tLOHO-91ZZUejkHDIw" />
+                </div>
+                <div class="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-md">
+                    <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        data-alt="Macro shot of henna application in progress, showing a thin cone applying a delicate floral pattern to skin. Tiny beads of terracotta-colored paste are expertly placed, highlighting the fine craftsmanship and precision involved. The lighting is warm and focused, capturing the tactile nature of the paste. The aesthetic is intimate and artistic, focusing on the moment of creation in a minimalist, light-filled studio."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI0qTfrffRc3Qi-Bx-IqnmMKimyNmnQ_hAwr7q9s7HosYWf7BYK0_4qmXgRrvzccXroLqBg9vA2ptTn6lY8V-nDdzVcVcSmLFI9GWlU5qPJI4CJ8y20OlDohBWEsznYWVlnUJx19pERoNIz7b4jI2njXiDWMRuMt2xFlrl-aBDFc4hKtN37qjzOLjEJRwuev6NpCibA4KD28hqX7PtUfBsje1YeDKRu97HOVQ-fS0ANfcddwQZzxzh0ZDOV2w4WTmytigSTVee9ks" />
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="py-xl px-gutter bg-surface-container">
+            <div class="max-w-container-max mx-auto">
+                <h3 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">Service Offerings</h3>
+                <div class="grid md:grid-cols-3 gap-gutter">
+                    <!-- Service Card 1 -->
+                    <div
+                        class="bg-surface p-8 rounded-xl shadow-[0_4px_20px_-5px_rgba(142,58,31,0.08)] flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-md"
+                            data-icon="auto_awesome">auto_awesome</span>
+                        <h4 class="font-headline-md text-primary mb-sm">Bridal Packages</h4>
+                        <p class="text-on-surface-variant mb-lg font-body-md">Comprehensive bridal designs from palms to
+                            elbows, including matching designs for the feet.</p>
+                        <span
+                            class="mt-auto inline-block bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-1 rounded-full font-label-md">From
+                            $250</span>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div
+                        class="bg-surface p-8 rounded-xl shadow-[0_4px_20px_-5px_rgba(142,58,31,0.08)] flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-md"
+                            data-icon="groups">groups</span>
+                        <h4 class="font-headline-md text-primary mb-sm">Guest Henna</h4>
+                        <p class="text-on-surface-variant mb-lg font-body-md">Elegant and quick patterns for your
+                            wedding guests or festive parties. Minimum 2 hours.</p>
+                        <span
+                            class="mt-auto inline-block bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-1 rounded-full font-label-md">From
+                            $100/hr</span>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div
+                        class="bg-surface p-8 rounded-xl shadow-[0_4px_20px_-5px_rgba(142,58,31,0.08)] flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-md"
+                            data-icon="brush">brush</span>
+                        <h4 class="font-headline-md text-primary mb-sm">Workshops</h4>
+                        <p class="text-on-surface-variant mb-lg font-body-md">Learn the basics of henna application,
+                            paste making, and traditional pattern building.</p>
+                        <span
+                            class="mt-auto inline-block bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-1 rounded-full font-label-md">From
+                            $75</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-xl px-gutter max-w-4xl mx-auto">
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-xl text-center italic">Kind Words from Brides
+            </h3>
+            <div class="relative bg-surface border border-outline-variant/30 p-10 rounded-2xl">
+                <span class="material-symbols-outlined text-primary-container opacity-20 text-6xl absolute top-4 left-4"
+                    data-icon="format_quote">format_quote</span>
+                <div class="relative z-10 text-center">
+                    <p class="font-headline-md text-on-surface mb-lg italic leading-relaxed">
+                        "Her presence is as calming as the henna application itself. She was meticulous with every tiny
+                        dot, and my bridal stain was the talk of the entire wedding weekend!"
+                    </p>
+                    <div class="flex items-center justify-center gap-sm">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img alt="Client"
+                                data-alt="A close-up portrait of a happy client with soft lighting, set against a blurred ivory background."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYkQoBMc0Ov3ZMEsPYmCmXtfgoX_25WqAfHbG_4ZqpqBvpwkAQ9H_XSF0dxX23gQuuQ_l-tqkLBopoYana42btp1NM82wIVTuP5VhzsaHmuZ7r6Lr-2OQaJOnLNOcuZHjUffAYImqjO70mhA_bbOEhcmpMVKoteKJtkE7CflI8gPodm0KzgkG2RGOJ75wGpC8S9OJA4RBm6mkPOzU1ADtLSZrKuQBfXWtOTlvhqIfPddCi1P7FZ0L7BOPlbc-QGfHXHVL3mxm1AS0" />
+                        </div>
+                        <div class="text-left">
+                            <h5 class="font-label-md text-primary">Anjali Sharma</h5>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest">San Francisco Bride</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact & Booking -->
+        <section class="py-xl px-gutter bg-surface-container-low" id="contact">
+            <div class="max-w-2xl mx-auto bg-surface p-md md:p-lg rounded-xl shadow-2xl shadow-primary/5">
+                <div class="text-center mb-lg">
+                    <h3 class="font-headline-lg text-headline-lg text-primary mb-sm">Begin Your Journey</h3>
+                    <p class="font-body-md text-on-surface-variant">Tell me about your special occasion</p>
+                </div>
+                <form class="space-y-md">
+                    <div class="grid md:grid-cols-2 gap-md">
+                        <div>
+                            <label class="font-label-md text-on-surface-variant mb-xs block">Full Name</label>
+                            <input
+                                class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-primary transition-colors py-2 px-0"
+                                placeholder="Aisha Patel" type="text" />
+                        </div>
+                        <div>
+                            <label class="font-label-md text-on-surface-variant mb-xs block">Event Date</label>
+                            <input
+                                class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-primary transition-colors py-2 px-0"
+                                type="date" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="font-label-md text-on-surface-variant mb-xs block">Event Type</label>
+                        <select
+                            class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-primary transition-colors py-2 px-0">
+                            <option>Bridal Mehendi</option>
+                            <option>Engagement</option>
+                            <option>Private Party</option>
+                            <option>Corporate Workshop</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-label-md text-on-surface-variant mb-xs block">Your Message</label>
+                        <textarea
+                            class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-primary transition-colors py-2 px-0 resize-none"
+                            placeholder="Share your vision or any specific requirements..." rows="3"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-md hover:opacity-90 transition-opacity">Send
+                        Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-[#8E3A1F]/10 bg-[#fdfcfb] dark:bg-stone-950">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-10 max-w-7xl mx-auto gap-6">
+            <div>
+                <span class="text-lg font-serif text-[#8E3A1F] block mb-2">Henna Heritage</span>
+                <p class="font-['Noto_Serif'] text-sm uppercase tracking-widest text-stone-500">© 2024 Henna Heritage.
+                    Crafted with Intention.</p>
+            </div>
+            <div class="flex gap-gutter">
+                <a class="font-['Noto_Serif'] text-sm uppercase tracking-widest text-stone-500 hover:text-[#d4af37] transition-colors duration-300"
+                    href="#">Portfolio</a>
+                <a class="font-['Noto_Serif'] text-sm uppercase tracking-widest text-stone-500 hover:text-[#d4af37] transition-colors duration-300"
+                    href="#">Services</a>
+                <a class="font-['Noto_Serif'] text-sm uppercase tracking-widest text-stone-500 hover:text-[#d4af37] transition-colors duration-300"
+                    href="#">About Me</a>
+                <a class="font-['Noto_Serif'] text-sm uppercase tracking-widest text-stone-500 hover:text-[#d4af37] transition-colors duration-300"
+                    href="#">Inquiry</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
