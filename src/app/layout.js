@@ -39,6 +39,11 @@ export const metadata = {
     title: "Ujjwal Mehndi Artist | Bridal & Traditional Henna Excellence",
     description: "Premium bridal and traditional mehndi services.",
   },
+  icons: {
+    icon: "/images/ujjwal_logo.jpg",
+    shortcut: "/images/ujjwal_logo.jpg",
+    apple: "/images/ujjwal_logo.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {

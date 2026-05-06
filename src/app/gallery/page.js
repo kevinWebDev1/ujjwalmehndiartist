@@ -13,7 +13,7 @@ export default function GalleryPage() {
     {
       id: 1,
       type: "photo",
-      src: "/images/gallery1.png",
+      src: "/images/gallery1.jpg",
       alt: "Intricate Bridal Mehndi",
       title: "Royal Bridal",
       category: "Bridal",
@@ -21,7 +21,7 @@ export default function GalleryPage() {
     {
       id: 2,
       type: "photo",
-      src: "/images/arabic.png",
+      src: "/images/gallary2.jpg",
       alt: "Modern Arabic Design",
       title: "Arabic Fusion",
       category: "Arabic",
@@ -29,7 +29,7 @@ export default function GalleryPage() {
     {
       id: 3,
       type: "photo",
-      src: "/images/arabic2.png",
+      src: "/images/gallary3.jpg",
       alt: "Detailed Henna",
       title: "Floral Patterns",
       category: "Modern",
@@ -37,7 +37,7 @@ export default function GalleryPage() {
     {
       id: 4,
       type: "photo",
-      src: "/images/gallery2.png",
+      src: "/images/gallery4.jpg",
       alt: "Ceremonial Art",
       title: "Engagement Special",
       category: "Events",
@@ -45,7 +45,7 @@ export default function GalleryPage() {
     {
       id: 5,
       type: "video",
-      src: "/images/traditional.png", // Using an image as a placeholder for video thumbnail
+      src: "/images/gallary5.jpg", // Using an image as a placeholder for video thumbnail
       alt: "Applying Henna Video",
       title: "Behind the Scenes",
       category: "BTS",
@@ -53,7 +53,7 @@ export default function GalleryPage() {
     {
       id: 6,
       type: "photo",
-      src: "/images/hero_ujjwal_mobile.png",
+      src: "/images/hero_ujjwal_mobile.jpg",
       alt: "Signature Design",
       title: "Signature Strokes",
       category: "Bridal",
