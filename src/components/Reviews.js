@@ -220,7 +220,7 @@ export default function Reviews() {
       <div className="lg:hidden">
         <div 
           ref={scrollRef}
-          className="flex overflow-x-auto gap-5 px-6 pb-8 scrollbar-hide snap-x snap-mandatory scroll-smooth touch-pan-x"
+          className="flex overflow-x-auto gap-5 px-6 pb-8 scrollbar-hide snap-x snap-proximity scroll-smooth"
         >
           {reviews.map((review) => (
             <div key={review.id} className="min-w-[85vw] md:min-w-[420px] snap-center">
