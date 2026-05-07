@@ -4,23 +4,23 @@ import Link from "next/link";
 export default function Gallery() {
   const images = [
     {
-      src: "/images/gallery1.png",
+      src: "/images/gallery1.jpg",
       alt: "Intricate Bridal Mehndi Excellence",
       title: "Bridal Excellence",
       span: "col-span-2 row-span-2",
     },
     {
-      src: "/images/arabic.png",
+      src: "/images/gallary3.jpg",
       alt: "Modern Arabic Henna Design",
       span: "col-span-2 row-span-1",
     },
     {
-      src: "/images/arabic2.png",
+      src: "/images/gallary5.jpg",
       alt: "Detailed Decorative Henna",
       span: "col-span-1 row-span-1",
     },
     {
-      src: "/images/gallery2.png",
+      src: "/images/gallery2.jpg",
       alt: "Ceremonial Mehndi Art",
       span: "col-span-1 row-span-1",
     },

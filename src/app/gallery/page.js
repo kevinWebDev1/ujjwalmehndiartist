@@ -21,7 +21,7 @@ export default function GalleryPage() {
     {
       id: 2,
       type: "photo",
-      src: "/images/gallary2.jpg",
+      src: "/images/gallery2.jpg",
       alt: "Modern Arabic Design",
       title: "Arabic Fusion",
       category: "Arabic",
@@ -37,7 +37,7 @@ export default function GalleryPage() {
     {
       id: 4,
       type: "photo",
-      src: "/images/gallery4.jpg",
+      src: "/images/gallary4.jpg",
       alt: "Ceremonial Art",
       title: "Engagement Special",
       category: "Events",

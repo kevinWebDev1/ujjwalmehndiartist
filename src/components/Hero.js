@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         {/* Mobile hero */}
         <Image
-          src="/images/hero_ujjwal_mobile.png"
+          src="/images/hero_ujjwal_mobile.jpg"
           alt="Ujjwal Mehndi Artist - Master of Bridal Henna"
           fill
           className="object-cover object-top lg:hidden"
